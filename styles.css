@@ -1,8 +1,22 @@
 /* styles.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
 
 /* Navbar */
 nav {
-    background-color: #333;
+    background-color: #1aad46;
     padding: 1em;
     position: relative; /* Needed for positioning the burger menu */
 }
@@ -49,24 +63,13 @@ nav ul li a {
     overflow: hidden;
     text-overflow: ellipsis;
     max-width: 8ch; /* Show first 8 characters and ellipsis */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, max-width 0.3s ease;
 }
 
-nav ul li a::after {
-    content: attr(data-full-text);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    white-space: nowrap;
-    background-color: #555;
-    color: white;
-    padding: 0.5em 1em;
-    display: none;
-    z-index: 10;
-}
 
 nav ul li a:hover {
     background-color: #555;
+    max-width: none; /* Remove max-width on hover */
 }
 
 nav ul li a:hover::after {
@@ -129,6 +132,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    bottom: 0%;
+    
+}
+footer {
+    flex-direction: column;
+    text-align: center;
 }
 
 .footer-logo img {
@@ -159,7 +168,7 @@ footer {
         position: absolute;
         top: 60px; /* Adjust based on your header height */
         left: 0;
-        background-color: #333;
+        background-color: hsla(240, 100%, 50%, 0.5); /* Yarim shaffof ko'k */;
         padding: 0;
         z-index: 20;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for dropdown effect */
@@ -175,28 +184,15 @@ footer {
     }
 
     nav ul li a {
-        max-width: none;
+        max-width: none; /* Allow text to extend fully */
+        white-space: normal; /* Allow text to wrap */
         padding: 1em; /* Increased padding for better touch target */
+        overflow: visible; /* Ensure no text is cut off */
     }
+
+  
 
     nav ul li a:hover {
-        background-color: #555;
-    }
-
-    
-    nav ul li a:hover::after {
-        background-color:#ddd;
-        text-align: center;
-        align-items:end;
-        display: flex;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-links a {
-        margin: 0.5em 0;
+        background-color: #555; /* Background color on hover */
     }
 }

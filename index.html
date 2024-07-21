@@ -1,32 +1,27 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuridik Xizmatlar</title>
+    <title>Responsive Navbar</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script> <!-- JavaScript faylini ulash -->
 </head>
 <body>
-    <!-- Navbar -->
     <nav>
         <div class="navbar-header">
-            <img src="logo.png" alt="Kompaniya logosi" class="logo">
-            <button class="burger-menu" id="burger-menu">
-                &#9776; <!-- Unicode character for burger icon -->
-            </button>
+            <img src="logo.png" alt="DUO co" class="logo">
+            <button class="burger-menu" id="burger-menu">&#9776;</button>
+            <ul id="navbar-links">
+                <li><a href="#" >Home</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#" >Visa</a></li>
+                <li><a href="#" >Help</a></li>
+                <li><a href="#" >Contact</a></li>
+            </ul>
         </div>
-        <ul id="navbar-links">
-            <li><a href="#tarjimonlik" data-full-text="Tarjimonlik xizmatlari">Tarjimon...</a></li>
-            <li><a href="#maslahatlar" data-full-text="Yuridik maslahatlar">Yuridik ...</a></li>
-            <li><a href="#visa" data-full-text="Visa bo'yicha xizmatlar">Visa bo'...</a></li>
-            <li><a href="#advakatura" data-full-text="Advokatura">Advokatu...</a></li>
-            <li><a href="#kontaktlar" data-full-text="Kontaktlar">Kontaktl...</a></li>
-        </ul>
     </nav>
-
-    <!-- Main Section -->
-    <main>
+     <!-- Main Section -->
+     <main>
         <section id="about">
             <h1>Bizning Yuridik Kompaniya</h1>
             <p>Bizning kompaniyamiz yuridik xizmatlar ko'rsatishda ko'p yillik tajribaga ega. Biz mijozlarimizga professional tarzda yuridik yordam ko'rsatamiz va ularning huquqlarini himoya qilamiz.</p>
@@ -47,17 +42,16 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <div class="footer-logo">
-            <img src="logo.png" alt="Kompaniya logosi">
+            <img src="footer-logo.png" alt="Footer Logo">
         </div>
         <div class="social-links">
-            <a href="https://facebook.com">Facebook</a>
-            <a href="https://twitter.com">Twitter</a>
-            <a href="https://instagram.com">Instagram</a>
-            <a href="https://linkedin.com">LinkedIn</a>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
