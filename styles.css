@@ -1,0 +1,202 @@
+/* styles.css */
+
+/* Navbar */
+nav {
+    background-color: #333;
+    padding: 1em;
+    position: relative; /* Needed for positioning the burger menu */
+}
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 8ch; /* Show first 8 characters and ellipsis */
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a::after {
+    content: attr(data-full-text);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    background-color: #555;
+    color: white;
+    padding: 0.5em 1em;
+    display: none;
+    z-index: 10;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+nav ul li a:hover::after {
+    display: block;
+}
+
+/* Main Section */
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2em;
+}
+
+main p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* FAQ Section */
+#faq {
+    text-align: left;
+    margin: 2em 0;
+}
+
+#faq h2 {
+    font-size: 1.8em;
+    margin-bottom: 1em;
+}
+
+.faq-item {
+    margin-bottom: 1em;
+}
+
+.faq-question {
+    background-color: #f0f0f0;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for questions */
+    border: 1px solid #ddd; /* Border for questions */
+}
+
+.faq-answer {
+    display: none;
+    padding: 1em;
+    background-color: #e0e0e0;
+    border-radius: 5px; /* Rounded corners for answers */
+    border: 1px solid #ddd; /* Border for answers */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-width: 100px;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        background-color: #333;
+        padding: 0;
+        z-index: 20;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for dropdown effect */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        max-width: none;
+        padding: 1em; /* Increased padding for better touch target */
+    }
+
+    nav ul li a:hover {
+        background-color: #555;
+    }
+
+    
+    nav ul li a:hover::after {
+        background-color:#ddd;
+        text-align: center;
+        align-items:end;
+        display: flex;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-links a {
+        margin: 0.5em 0;
+    }
+}
