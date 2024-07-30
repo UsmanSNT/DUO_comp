@@ -168,7 +168,7 @@ footer {
         position: absolute;
         top: 60px; /* Adjust based on your header height */
         left: 0;
-        background-color: hsla(240, 100%, 50%, 0.5); /* Yarim shaffof ko'k */;
+        background-color: hsla(157, 87%, 49%, 0.956); /* Yarim shaffof ko'k */;
         padding: 0;
         z-index: 20;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for dropdown effect */
