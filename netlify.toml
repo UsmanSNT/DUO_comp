@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat.php"
+  status = 200
