@@ -1,54 +1,197 @@
+
+<?php
+	include __DIR__ ."/includes/header.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap Accordion Example</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQb7w5J1AIb1hG5LRlmo54S6OL8R7xO9E5w5S7B5vX6XW3WozEYtLQ" crossorigin="anonymous">
-    <!-- Popper.js (Bootstrap uchun kerak) -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              Accordion Item #1
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+		<link   href="styles.css" rel="stylesheet"/>
+	<style>
+  		.video-background {
+            position: fixed;
+            inset-inline-end: 0;
+            inset-block-end: 0;
+            min-inline-size: 100%;
+            min-block-size: 100%;
+            z-index: -1;
+        }
+			 /* Konteyner uslublari */
+.container {
+/*   background-image: url('oldPage.png'); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; 
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-inline-start: 1.5rem;
+  padding-inline-end: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+ .container {
+            border: 5px solid transparent;
+            animation: borderAnimation 5s infinite;
+        }
+
+        @keyframes borderAnimation {
+            0% {
+                border-color: red;
+            }
+            25% {
+                border-color: yellow;
+            }
+            50% {
+                border-color: green;
+            }
+            75% {
+                border-color: blue;
+            }
+            100% {
+                border-color: red;
+            }
+        }
+
+/* Qator uslublari */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline-end: -1rem;
+  margin-inline-start: -1rem;
+}
+
+.row.justify-content-center {
+  justify-content: center;
+}
+
+/* Ustun uslublari */
+.col-md-10 {
+  flex: 0 0 auto;
+  inline-size: 83.333333%;
+}
+
+.col-lg-8 {
+  flex: 0 0 auto;
+  inline-size: 66.666667%;
+}
+
+.col-xl-7 {
+  flex: 0 0 auto;
+  inline-size: 58.333333%;
+}
+
+/* Ustun uchun fon uslublari */
+.col-md-10.col-lg-8.col-xl-7 {
+  inline-size: 100%;
+  block-size: auto;
+  background-position: center;
+}
+
+/* Post ko'rinishi uslublari */
+.post-preview {
+  margin-block-end: 1.5rem;
+  text-align: center;
+}
+
+.post-preview a {
+  text-decoration: none;
+  color: #17fe00;
+}
+
+.post-preview h2 {
+  font-size: 2rem;
+  margin-block-end: 0.5rem;
+}
+
+.post-preview p {
+  margin: 0;
+  color: red;
+}
+
+/* Ajratgich uslublari */
+hr.my-4 {
+  margin-block-start: 1.5rem;
+  margin-block-end: 1.5rem;
+  border: 0;
+  border-block-start: 1px solid rgba(23,254,0,255);
+}
+</style>
+
+    </head>		    
+    <body>
+  		
+		<!--Backround video-->
+
+		<video autoplay muted loop class="video-background">
+			<source src="cyberBG.mp4" type="video/mp4">
+		</video>
+
+
+        <div class="container px-4 px-lg-5 ">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="/~w120211858/study/KUTUB/index.php">
+                            <h2 class="post-title">KUTUB</h2>
+                        </a>
+                           <p> 날짜 - 2023년도	   </p>
+                    </div>
+					<!-- Divider-->
+			  		<hr class="my-4" />
+ 					<!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="/~w120211858/study/2023/index.php">
+                            <h2 class="post-title">네트워크</h2>
+                        </a>
+                           <p> 날짜 - 2023년도</p>     
+                    </div>
+					<!-- Divider-->
+			  		<hr class="my-4" />
+					<!-- Post preview-->
+					<div class="post-preview">
+                        <a href="/~w120211858/study/network/index.php">
+                            <h2 class="post-title">네트워크1</h2>
+                        </a>
+                            <p>날짜 - 2023년도</p>
+                    </div>
+   					
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="/~w120211858/study/forensic/index.php">
+                            <h2 class="post-title">포렌식</h2>
+                        </a>
+                            <p>날짜 - 2024-1학기</p>
+                    </div>
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Post preview-->
+                    <div class="post-preview">
+                        <a href="/~w120211858/study/Analysis/index.php">
+                            <h2 class="post-title">악성코드 분석</h2>
+                        </a>
+                            <p>날짜 - 2024-1학기</p>
+                    </div>
+                    <hr class="my-4" />
+                </div>
             </div>
-          </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-            </div>
-          </div>
-        </div>
-      </div>
-</body>
+    </body>
 </html>
+
+<?php
+	include __DIR__ ."/includes/footer.php";
+?>
