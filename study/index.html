@@ -1,7 +1,19 @@
-<?php
-	include __DIR__ ."/../includes/header.php";
-?>
-<div id="header"></div>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="header"></div>
+
 <div class="container mt-3">
   <h2>컴퓨터포렌식스</h2>
   <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>            
@@ -44,15 +56,11 @@
 <div id="footer"></div>
 
 <script>
-    fetch('/../includes/header.html, footer.html')
+    fetch('./includes/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
       });
   </script>
-
-
-
-<?php
-	include __DIR__ ."/../includes/footer.php";
-?>
+</body>
+</html>
