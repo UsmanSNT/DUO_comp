@@ -16,10 +16,10 @@
 	<style>
   		.video-background {
             position: fixed;
-            inset-inline-end: 0;
-            inset-block-end: 0;
-            min-inline-size: 100%;
-            min-block-size: 100%;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
             z-index: -1;
         }
 			 /* Konteyner uslublari */
@@ -28,10 +28,10 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; 
-  padding-inline-start: 1rem;
-  padding-inline-end: 1rem;
-  padding-inline-start: 1.5rem;
-  padding-inline-end: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
  .container {
@@ -61,8 +61,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-inline-end: -1rem;
-  margin-inline-start: -1rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .row.justify-content-center {
@@ -72,29 +72,29 @@
 /* Ustun uslublari */
 .col-md-10 {
   flex: 0 0 auto;
-  inline-size: 83.333333%;
+  width: 83.333333%;
 }
 
 .col-lg-8 {
   flex: 0 0 auto;
-  inline-size: 66.666667%;
+  width: 66.666667%;
 }
 
 .col-xl-7 {
   flex: 0 0 auto;
-  inline-size: 58.333333%;
+  width: 58.333333%;
 }
 
 /* Ustun uchun fon uslublari */
 .col-md-10.col-lg-8.col-xl-7 {
-  inline-size: 100%;
-  block-size: auto;
+  width: 100%;
+  height: auto;
   background-position: center;
 }
 
 /* Post ko'rinishi uslublari */
 .post-preview {
-  margin-block-end: 1.5rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
@@ -105,7 +105,7 @@
 
 .post-preview h2 {
   font-size: 2rem;
-  margin-block-end: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .post-preview p {
@@ -115,17 +115,17 @@
 
 /* Ajratgich uslublari */
 hr.my-4 {
-  margin-block-start: 1.5rem;
-  margin-block-end: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   border: 0;
-  border-block-start: 1px solid rgba(23,254,0,255);
+  border-top: 1px solid rgba(23,254,0,255);
 }
 </style>
 
     </head>		    
     <body>
-      <div id="header"></div>
-        <!--Backround video-->
+  		<div id="header"></div>
+		<!--Backround video-->
 
 		<video autoplay muted loop class="video-background">
 			<source src="cyberBG.mp4" type="video/mp4">
@@ -155,7 +155,7 @@ hr.my-4 {
 			  		<hr class="my-4" />
 					<!-- Post preview-->
 					<div class="post-preview">
-                        <a href="/~w120211858/study/network/index.php">
+                        <a href="../study/Network/index.html">
                             <h2 class="post-title">네트워크1</h2>
                         </a>
                             <p>날짜 - 2023년도</p>
@@ -165,7 +165,7 @@ hr.my-4 {
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="/~w120211858/study/forensic/index.php">
+                        <a href="../study/ForenSheks/index.html">
                             <h2 class="post-title">포렌식</h2>
                         </a>
                             <p>날짜 - 2024-1학기</p>
@@ -174,7 +174,7 @@ hr.my-4 {
                     <hr class="my-4" />
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="/~w120211858/study/Analysis/index.php">
+                        <a href="../study/Analysis/index.html">
                             <h2 class="post-title">악성코드 분석</h2>
                         </a>
                             <p>날짜 - 2024-1학기</p>
@@ -183,6 +183,7 @@ hr.my-4 {
                 </div>
             </div>
         </div>
+        
         <script>
           fetch('./includes/header.html')
             .then(response => response.text())
@@ -190,6 +191,7 @@ hr.my-4 {
               document.getElementById('header').innerHTML = data;
             });
         </script>
+
+
     </body>
 </html>
-
