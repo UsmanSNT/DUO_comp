@@ -1,0 +1,58 @@
+<?php
+	include __DIR__ ."/../includes/header.php";
+?>
+<div id="header"></div>
+<div class="container mt-3">
+  <h2>컴퓨터포렌식스</h2>
+  <p>The .table class adds basic styling (light padding and horizontal dividers) to a table:</p>            
+  <table class="table">
+    <thead>
+      <tr>
+        <th>주차</th>
+        <th>Lastname</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1주차</td>
+        <td><a href="/~w120211858/study/20240308001.php"> 공부방 만들기</a></td>
+        <td>2024-03-08</td>
+      </tr>
+
+      <tr>
+        <td>2주차</td>
+        <td><a href="/~w120211858/study/20240315002.php">디지털포렌식개념,5대원칙(무결성의원칙),실습,해시값 검증</a></td>
+        <td>2024-03-15</td>
+      </tr>
+
+	  <tr>
+        <td>3주차</td>
+        <td><a href="/~w120211858/study/20240322003.php">1.볼륨 2.파티션 3.포맷 4.파일시스템</a></td>
+        <td>2024-03-22</td>
+      </tr>
+
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div id="footer"></div>
+
+<script>
+    fetch('/../includes/header.html, footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+
+
+<?php
+	include __DIR__ ."/../includes/footer.php";
+?>
