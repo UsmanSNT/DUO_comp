@@ -124,6 +124,7 @@ hr.my-4 {
 
     </head>		    
     <body>
+      
   		<div id="header"></div>
 		<!--Backround video-->
 
@@ -185,7 +186,7 @@ hr.my-4 {
         </div>
         
         <script>
-          fetch('./includes/header.html')
+          fetch('../study/Analysis/includes/header.html')
             .then(response => response.text())
             .then(data => {
               document.getElementById('header').innerHTML = data;
