@@ -68,17 +68,39 @@ nav ul li a {
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 8ch; /* Show first 8 characters and ellipsis */
+   /*  text-overflow: ellipsis;
+    max-width: 8ch; Show first 8 characters and ellipsis */
     transition: background-color 0.3s ease, max-width 0.3s ease;
 }
 
-
-nav ul li a:hover {
+.sub-menu-1{
+    display: none;
+}
+nav ul li a:hover { 
     background-color: #555;
     max-width: none; /* Remove max-width on hover */
 }
 
+nav ul li:hover .sub-menu-1{
+    display: block;
+    position:fixed;
+    background-color:#17fe00;
+    margin-right: 15px;
+    margin-bottom: -15px;
+}
+
+nav ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin:10px;
+}
+nav ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transition;
+    border-radius:0;
+    text-align: left;
+}
 nav ul li a:hover::after {
     display: block;
 }
@@ -125,6 +147,7 @@ nav ul li a:hover::after {
     nav ul li a:hover {
         background-color: #555; /* Background color on hover */
     }
+
 }
 
 
