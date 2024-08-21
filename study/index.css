@@ -1,0 +1,241 @@
+
+
+
+  /* styles.css */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+/* Navbar */
+nav {
+    background-color: #1aad46;
+    padding: 1em;
+    position: relative; /* Needed for positioning the burger menu */
+}
+
+nav img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+.navbar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
+
+.burger-menu {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 8ch; /* Show first 8 characters and ellipsis */
+    transition: background-color 0.3s ease, max-width 0.3s ease;
+}
+
+
+nav ul li a:hover {
+    background-color: #555;
+    max-width: none; /* Remove max-width on hover */
+}
+
+nav ul li a:hover::after {
+    display: block;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        background-color: hsla(157, 87%, 49%, 0.956); /* Yarim shaffof ko'k */;
+        padding: 0;
+        z-index: 20;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for dropdown effect */
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        max-width: none; /* Allow text to extend fully */
+        white-space: normal; /* Allow text to wrap */
+        padding: 1em; /* Increased padding for better touch target */
+        overflow: visible; /* Ensure no text is cut off */
+    }
+
+  
+
+    nav ul li a:hover {
+        background-color: #555; /* Background color on hover */
+    }
+}
+
+
+
+
+
+
+/*start maen*/
+.video-background {
+    position: fixed;
+    inset-inline-end: 0;
+    inset-block-end: 0;
+    min-inline-size: 100%;
+    min-block-size: 100%;
+    z-index: -1;
+}
+     /* Konteyner uslublari */
+.container {
+/*   background-image: url('oldPage.png'); */
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover; 
+padding-inline-start: 1rem;
+padding-inline-end: 1rem;
+padding-inline-start: 1.5rem;
+padding-inline-end: 1.5rem;
+background-color: rgba(0, 0, 0, 0.5);
+}
+.container {
+    border: 5px solid transparent;
+    animation: borderAnimation 5s infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: yellow;
+    }
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+/* Qator uslublari */
+.row {
+display: flex;
+flex-wrap: wrap;
+margin-inline-end: -1rem;
+margin-inline-start: -1rem;
+}
+
+.row.justify-content-center {
+justify-content: center;
+}
+
+/* Ustun uslublari */
+.col-md-10 {
+flex: 0 0 auto;
+inline-size: 83.333333%;
+}
+
+.col-lg-8 {
+flex: 0 0 auto;
+inline-size: 66.666667%;
+}
+
+.col-xl-7 {
+flex: 0 0 auto;
+inline-size: 58.333333%;
+}
+
+/* Ustun uchun fon uslublari */
+.col-md-10.col-lg-8.col-xl-7 {
+inline-size: 100%;
+block-size: auto;
+background-position: center;
+}
+
+/* Post ko'rinishi uslublari */
+.post-preview {
+margin-block-end: 1.5rem;
+text-align: center;
+}
+
+.post-preview a {
+text-decoration: none;
+color: #17fe00;
+}
+
+.post-preview h2 {
+font-size: 2rem;
+margin-block-end: 0.5rem;
+}
+
+.post-preview p {
+margin: 0;
+color: red;
+}
+
+/* Ajratgich uslublari */
+hr.my-4 {
+margin-block-start: 1.5rem;
+margin-block-end: 1.5rem;
+border: 0;
+border-block-start: 1px solid rgba(23,254,0,255);
+}
