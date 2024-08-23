@@ -154,7 +154,6 @@ nav ul li a:hover::after {
         animation: borderAnimation 5s infinite;
         margin: 0 auto; /* Markazlashtirish uchun */
     }
-}
 .container {
     border: 5px solid transparent;
     animation: borderAnimation 5s infinite;
