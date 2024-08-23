@@ -142,16 +142,18 @@ nav ul li a:hover::after {
     z-index: -1;
 }
      /* Konteyner uslublari */
-.container {
-/*   background-image: url('oldPage.png'); */
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover; 
-padding-left: 1rem;
-padding-right: 1rem;
-padding-left: 1.5rem;
-padding-right: 1.5rem;
-background-color: rgba(0, 0, 0, 0.5);
+     .container {
+        width: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid transparent;
+        animation: borderAnimation 5s infinite;
+        margin: 0 auto; /* Markazlashtirish uchun */
+    }
 }
 .container {
     border: 5px solid transparent;
