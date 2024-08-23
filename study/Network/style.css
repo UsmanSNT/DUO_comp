@@ -67,7 +67,6 @@ nav ul li a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 8ch; /* Show first 8 characters and ellipsis */
     transition: background-color 0.3s ease, max-width 0.3s ease;
 }
 
@@ -129,3 +128,129 @@ nav ul li a:hover::after {
 
 
 /*start maen*/
+
+.video-background {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+.container {
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid transparent;
+    animation: borderAnimation 5s infinite;
+    margin: 0 auto; /* Markazlashtirish uchun */
+}
+
+/* 800px dan kichik ekranlar uchun */
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
+/* 900px dan katta ekranlar uchun */
+@media (min-width: 900px) {
+    .container {
+        width: 50%;
+    }
+}
+
+
+
+
+
+@keyframes borderAnimation {
+    0% {
+        border-color: red;
+    }
+    25% {
+        border-color: yellow;
+    }
+    50% {
+        border-color: green;
+    }
+    75% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+
+
+/* Qator uslublari */
+.row {
+display: flex;
+flex-wrap: wrap;
+margin-right: -1rem;
+margin-left: -1rem;
+}
+
+.row.justify-content-center {
+justify-content: center;
+}
+
+/* Ustun uslublari */
+.col-md-10 {
+flex: 0 0 auto;
+width: 83.333333%;
+}
+
+.col-lg-8 {
+flex: 0 0 auto;
+width: 66.666667%;
+}
+
+.col-xl-7 {
+flex: 0 0 auto;
+width: 58.333333%;
+}
+
+/* Ustun uchun fon uslublari */
+.col-md-10.col-lg-8.col-xl-7 {
+width: 100%;
+height: auto;
+background-position: center;
+}
+
+/* Post ko'rinishi uslublari */
+.post-preview {
+margin-bottom: 1.5rem;
+text-align: center;
+}
+
+.post-preview a, h3 {
+text-decoration: none;
+color: #17fe00;
+}
+
+.post-preview h2 {
+font-size: 2rem;
+margin-bottom: 0.5rem;
+}
+
+.post-preview p {
+margin: 0;
+color: red;
+}
+
+/* Ajratgich uslublari */
+hr.my-4 {
+margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+border: 0;
+border-top: 3px solid rgba(23,254,0,255);
+animation: borderAnimation 5s infinite;
+}
