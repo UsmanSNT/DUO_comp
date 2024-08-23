@@ -62,7 +62,8 @@ nav ul li a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 8ch; /* Show first 8 characters and ellipsis */
+    /* max-width: 8ch;  */
+    /* Show first 8 characters and ellipsis */
     transition: background-color 0.3s ease, max-width 0.3s ease;
 }
 

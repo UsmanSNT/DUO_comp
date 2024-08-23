@@ -69,7 +69,6 @@ nav ul li a {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 8ch; /* Show first 8 characters and ellipsis */
     transition: background-color 0.3s ease, max-width 0.3s ease;
 }
 
@@ -157,6 +156,12 @@ nav ul li a:hover::after {
 .container {
     border: 5px solid transparent;
     animation: borderAnimation 5s infinite;
+}
+/* 800px dan kichik ekranlar uchun */
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
 }
 
 @keyframes borderAnimation {

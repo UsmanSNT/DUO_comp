@@ -182,6 +182,13 @@ nav ul li a:hover::after {
     animation: borderAnimation 5s infinite;
 }
 
+/* 800px dan kichik ekranlar uchun */
+@media (max-width: 800px) {
+    .container {
+        width: 100%;
+    }
+}
+
 @keyframes borderAnimation {
     0% {
         border-color: red;
